@@ -31,13 +31,15 @@ public class LoginPage extends JFrame implements ActionListener {
         ImageIcon img1= new ImageIcon(i1);
         l1.setIcon(img1);
         
+        // Adding l1 into the JFrame.
+        f.add(l1);
+        
         l2= new JLabel("Login School Account");
         l2.setForeground(new Color(0, 32, 96));
         l2.setBounds(310,50,500,50);
         l2.setFont(new Font("Arial", Font.BOLD, 30));
         
-        // Adding Elements on the Image Lavel.
-        f.add(l1);
+        // Adding l2 on the Image Lavel.
         l1.add(l2);
         
         wlecomeLavelJLabel= new JLabel("Welcome");
@@ -109,19 +111,21 @@ public class LoginPage extends JFrame implements ActionListener {
         l1.add(l6);
         
         b1 = new JButton("LOGIN");
-        b1.setBounds(450,380,100,40);
+        b1.setBounds(440,380,105,40);
         b1.setFont(new Font("Arial", Font.BOLD, 20));
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.WHITE);
+        b1.addActionListener(this);
         
         // Adding b1 on the image lavel.
         l1.add(b1);
         
-        b2 = new JButton("EXIT");
-        b2.setBounds(560,380, 100,40);
+        b2 = new JButton("CLEAR");
+        b2.setBounds(555,380, 105,40);
         b2.setFont(new Font("Arial", Font.BOLD, 20));
         b2.setBackground(new Color(191, 247, 161));
         b2.setForeground(Color.BLACK);
+        b2.addActionListener(this);
         
         // Adding b2 on the image lavel.
         l1.add(b2);
@@ -141,6 +145,7 @@ public class LoginPage extends JFrame implements ActionListener {
         f.setLocation(300, 100);
     }
     
+    @Override
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == b1){
             try {
@@ -148,13 +153,24 @@ public class LoginPage extends JFrame implements ActionListener {
                 String userNameString = t1.getText();
                 String passwordString = p1.getText();
                 String accountTypeString = ch1.getSelectedItem();
-                String quaryString = "SELECT * FROM LOGIN WHERE USERNAME='"+userNameString+"' AND PASSWORD='"+passwordString+"'";
+                String quaryString = "SELECT * FROM ADMIN WHERE USERNAME='"+userNameString+"' AND PASSWORD='"+passwordString+"'";
                 ResultSet resultSet = objConnectionClass.statement.executeQuery(quaryString);
                 if(resultSet.next()){
-//                    new AdminHomePage().setVisible(true);
-                    System.out.println("Login Successfully");
+                    // Account Type Condition Validations.
+                    if(accountTypeString.equals("Admin")){
+                     new AdminHomePage(accountTypeString).setVisible(true);
+                    // System.out.println("Login Successfully as - Admin");
+                    }else if(accountTypeString.equals("Teacher")){
+                    // new TeacherHomePage().setVisible(true);
+                    System.out.println("Login Successfully as - Teacher");
+                    }else if(accountTypeString.equals("Student")){
+                    // new StudentHomePage().setVisible(true);
+                    System.out.println("Login Successfully as - Student");
+                    }
                 }else{
                     JOptionPane.showMessageDialog(null, "You have entered Invalid..! userName and Password.");
+                    f.setVisible(false);
+                    f.setVisible(true);
                 }
                 
             } catch (Exception e) {
@@ -162,7 +178,8 @@ public class LoginPage extends JFrame implements ActionListener {
             }
             
         }else if(ae.getSource() == b2){
-            f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            t1.setText("");
+            p1.setText("");
         }
     }
     
