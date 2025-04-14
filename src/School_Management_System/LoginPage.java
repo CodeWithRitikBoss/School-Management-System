@@ -26,7 +26,7 @@ public class LoginPage extends JFrame implements ActionListener {
         l1.setBounds(0,0,950,550);
         l1.setLayout(null);
         
-        ImageIcon img= new ImageIcon(ClassLoader.getSystemResource("Images/Image2.png"));
+        ImageIcon img= new ImageIcon(ClassLoader.getSystemResource("Images/Image1.jpg"));
         Image i1=  img.getImage().getScaledInstance(950, 550, Image.SCALE_SMOOTH);
         ImageIcon img1= new ImageIcon(i1);
         l1.setIcon(img1);
@@ -102,7 +102,7 @@ public class LoginPage extends JFrame implements ActionListener {
         l6.setBounds(300,380,50,50);
         l6.setLayout(null);
         
-        ImageIcon imgLogo= new ImageIcon(ClassLoader.getSystemResource("Images/Image4.png"));
+        ImageIcon imgLogo= new ImageIcon(ClassLoader.getSystemResource("Images/Image3.png"));
         Image imgLogo1=  imgLogo.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
         ImageIcon imgLogo2= new ImageIcon(imgLogo1);
         l6.setIcon(imgLogo2);
@@ -171,10 +171,12 @@ public class LoginPage extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "You have entered Invalid..! userName and Password.");
                     f.setVisible(false);
                     f.setVisible(true);
-                }
-                
+                }   
             } catch (Exception e) {
-                System.out.println("Exception is : "+ e);
+                //System.out.println("Exception while executing admin table : "+ e);
+                JOptionPane.showMessageDialog(null, "Exception while executing admin table : "+ e);
+                    f.setVisible(false);
+                    f.setVisible(true);
             }
             
         }else if(ae.getSource() == b2){

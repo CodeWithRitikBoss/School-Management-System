@@ -19,7 +19,7 @@ public class ConnectionClass {
             // System.out.println("Connection Established Sussessfully.");
             
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Exception is : "+ e);
+            System.out.println("Exception while connecting DB : "+ e);
         }
         // System.out.println("Constructor is here.");
     }
