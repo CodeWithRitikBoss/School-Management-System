@@ -18,7 +18,7 @@ School Management System is a Java-based application designed to streamline admi
   </tr>
   <tr>
     <td>
-      <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
+      <img align="center" src="https://github.com/CodeWithRitikBoss/School-Management-System/blob/master/SchoolManagementSystemImages/AdminHomePage.png" alt="ScreenShort 1 of Application" width="300" />
     </td>
   </tr>
   <tr>
