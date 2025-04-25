@@ -13,68 +13,32 @@ School Management System is a Java-based application designed to streamline admi
 <table border="5px" style="border-collapse: collapse;">
   <tr>
     <td>
-      <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
+      <img align="center" src="https://github.com/CodeWithRitikBoss/School-Management-System/blob/master/SchoolManagementSystemImages/LoginPage.png" alt="ScreenShort 1 of Application" width="1080" />
     </td>
   </tr>
   <tr>
     <td>
       <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
     </td>
+  </tr>
+  <tr>
     <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
+      <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
     </td>
   </tr>
   <tr>
     <td>
       <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
     </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
-    </td>
   </tr>
   <tr>
     <td>
       <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
     </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
-    </td>
   </tr>
   <tr>
     <td>
       <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img align="center" src="" alt="ScreenShort 1 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 2 of Application" width="300" />
-    </td>
-    <td>
-      <img align="center" src="" alt="ScreenShort 3 of Application" width="300" />
     </td>
   </tr>
 </table>
